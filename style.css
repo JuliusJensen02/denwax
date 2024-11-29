@@ -1,0 +1,576 @@
+/**
+ * Theme Name:     Hello Elementor Child
+ * Author:         Elementor Team
+ * Template:       hello-elementor
+ * Text Domain:	   hello-elementor-child
+ * Description:    Hello Elementor is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the Elementor site builder plugin. The theme is free, open-source, and designed for users who want a flexible, easy-to-use, and customizable website. The theme, which is optimized for performance, provides a solid foundation for users to build their own unique designs using the Elementor drag-and-drop site builder. Its simplicity and flexibility make it a great choice for both beginners and experienced Web Creators.
+ */
+
+#content div.page-header{
+    display: flex;
+    justify-content: center;
+}
+
+#content div.page-header h1{
+    text-align: center;
+    background-color: #efefef;
+    padding: 15px 0;
+    margin: 0;
+    max-width: 1200px;
+}
+
+#checkoutPageWrap{
+    display: flex;
+    justify-content: center;
+    padding: 80px 5% 120px 5%;
+}
+
+#checkoutPage{
+    display: flex;
+    gap: 70px;
+    max-width: 1200px;
+}
+
+#checkoutPage #leftCheckout{
+    flex: 1;
+}
+
+#checkoutPage #rightCheckout{
+    width: 500px;
+}
+
+#checkoutPage #leftCheckout .accordion .heading{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var( --e-global-color-7751525 );
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+#checkoutPage #leftCheckout .accordion .heading h2{
+    margin: 0;
+}
+
+#checkoutPage #leftCheckout .accordion .heading h2.number{
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    color: var( --e-global-color-7751525 );
+    font-family: "Alegreya", Sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1;
+    margin-right: 50px;
+    padding: 12px;
+    border: 2px solid var( --e-global-color-7751525 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+}
+
+#checkoutPage #leftCheckout .accordion .heading h2.text{
+    font-family: "Alegreya", Sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-right: 20px;
+    flex: 1;
+}
+
+#checkoutPage #leftCheckout .accordion .heading svg{
+    transform: rotate(90deg);
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+}
+
+#checkoutPage #leftCheckout .accordion.accordion-open .heading svg{
+    transform: rotate(0deg);
+}
+
+@media (max-width: 767px){
+    #checkoutPage #leftCheckout .accordion .heading h2.number{
+        margin-right: 20px;
+        padding: 8px;
+    }
+    #checkoutPage #leftCheckout .accordion .heading h2.text{
+        font-size: 22px;
+    }
+    #checkoutPageWrap{
+        padding: 50px 5% 40px 5%;
+    }
+}
+
+@media (max-width: 1024px){
+    #checkoutPage{
+        gap: 30px;
+    }
+    #checkoutPageWrap{
+        display: flex;
+        justify-content: center;
+        padding: 30px 5% 120px 5%;
+    }
+}
+
+#checkoutPage #leftCheckout .accordion .container{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+#checkoutPage #leftCheckout .accordion.accordion-open .container{
+    max-height: 1000px;
+    padding: 40px 0;
+}
+
+#checkoutPage #leftCheckout .accordion.accordion-open .heading .number{
+    background-color: #202020;
+    color: white;
+    border-color: #202020;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p{
+    width: 100%;
+    grid-column: span 2;
+}
+
+@media (max-width: 767px){
+    #checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p{
+        grid-column: span 4 !important;
+    }
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p#billing_postcode_field, #checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p#billing_city_field{
+    grid-column: span 1;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p label{
+    font-family: "Raleway", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p input, #checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p textarea{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #202020;
+    background-color: #EBEBEB;
+    border-radius: 6px 6px 0 0;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p abbr{
+    color: #328112 !important;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p #select2-billing_country-container{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #202020;
+    background-color: #EBEBEB;
+    border-radius: 6px 6px 0 0;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    height: 16px;
+    box-sizing: content-box;
+    line-height: 16px;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p .select2-selection{
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+#checkoutPage #leftCheckout .woocommerce-billing-fields__field-wrapper p .select2-selection__arrow{
+    height: calc(1rem + 16px);
+}
+
+#checkoutPage #shipping_method{
+    padding-bottom: 20px;
+}
+
+@media (max-width: 767px){
+    #checkoutPage #shipping_method{
+        padding-bottom: 50px;
+    }
+}
+
+#checkoutPage #leftCheckout #ws_drop_point_blob{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #202020;
+    background-color: #EBEBEB;
+    border-radius: 6px 6px 0 0;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    height: 50px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+#checkoutPage #leftCheckout #shippingInfo li{
+    margin-bottom: 25px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+#checkoutPage #leftCheckout #shippingInfo li label{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkoutPage #leftCheckout #shippingInfo li:last-child:after{
+    content: "Ved afhening på vores lager, bedes du ringe på tlf.: +45 70 70 72 50 for at aftale afhentning inden du kommer. Alle hverdage 8-16.";
+    position: absolute;
+    bottom: 0;
+    transform: translateY(calc(100% + 10px));
+    color: #5b5b5b;
+}
+
+#checkoutPage #leftCheckout #payment{
+    background: none;
+}
+
+#checkoutPage #leftCheckout #payment>ul, #checkoutPage #leftCheckout #payment>div{
+    padding: 0;
+}
+
+#checkoutPage #leftCheckout #payment #place_order{
+    float: unset !important;
+    color: white;
+    background-color: #202020;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 20px;
+    width: 100%;
+}
+
+#checkoutPage #leftCheckout #payment #place_order:hover{
+    background-color: var( --e-global-color-secondary );
+}
+
+#checkoutPage #leftCheckout #payment .woocommerce-privacy-policy-text{
+    display: none;
+}
+
+#checkoutPage #leftCheckout #payment .wc_payment_methods{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+#checkoutPage #leftCheckout #payment .wc_payment_methods .payment_box{
+    background-color: #efefef;
+}
+
+#checkoutPage #leftCheckout #payment .wc_payment_methods .payment_box:before{
+    display: none;
+}
+
+#checkoutPage #rightCheckout form.checkout_coupon{
+    all: unset;
+    display: flex !important;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#checkoutPage #rightCheckout h2.coupon-heading{
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Alegreya";
+}
+
+#checkoutPage #rightCheckout form.checkout_coupon input{
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    outline: 0;
+    background-color: #EBEBEB;
+    flex: 1;
+}
+
+#checkoutPage #rightCheckout form.checkout_coupon button{
+    background-color: #202020;
+    color: white;
+    flex: 0;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+}
+
+#checkoutPage #rightCheckout form.checkout_coupon button:hover{
+    background-color: #202020;
+    color: white;
+}
+
+#checkoutPage #rightCheckout form.checkout_coupon .coupon-error-notice{
+    flex: 100%;
+    margin-top: -10px;
+}
+
+#checkoutPage #rightCheckout #order_review{
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#checkoutPage #rightCheckout #order_review #payment{
+    display: none !important;
+}
+
+#checkoutPage #rightCheckout #order_review .headings{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#checkoutPage #rightCheckout #order_review .headings h2{
+    margin: 0;
+    font-family: "Alegreya", Sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+#checkoutPage #rightCheckout #order_review .headings a{
+    font-family: "Raleway", Sans-Serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#checkoutPage #rightCheckout #order_review .headings svg{
+    display: none;
+}
+
+@media (max-width: 1024px){
+    #checkoutPage #rightCheckout #order_review .headings a{
+        display: none;
+    }
+
+    #checkoutPage #rightCheckout #order_review .headings svg{
+        display: block;
+        transform: rotate(90deg);
+        transition: 0.3s;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
+
+    #checkoutPage #rightCheckout #order_review.open .headings svg{
+        display: block;
+        transform: rotate(0deg);
+    }
+    #checkoutPage #rightCheckout #order_review:not(.open) .products,
+    #checkoutPage #rightCheckout #order_review:not(.open) .subtotal,
+    #checkoutPage #rightCheckout #order_review:not(.open) .coupon,
+    #checkoutPage #rightCheckout #order_review:not(.open) .shipping{
+        display: none;
+    }
+    #checkoutPage #rightCheckout #order_review.open .products,
+    #checkoutPage #rightCheckout #order_review.open .subtotal,
+    #checkoutPage #rightCheckout #order_review.open .coupon,
+    #checkoutPage #rightCheckout #order_review.open .shipping{
+        display: flex
+    }
+}
+
+#checkoutPage #rightCheckout .products{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    border-bottom: 1px solid #A5A29F;
+    padding-bottom: 20px;
+}
+
+#checkoutPage #rightCheckout .product-row{
+    display: flex;
+    gap: 20px;
+    height: 70px;
+}
+
+#checkoutPage #rightCheckout .product-row img{
+    height: 100%;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+#checkoutPage #rightCheckout .product-row .product-name{
+    flex: 1;
+    font-family: "Raleway", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4em;
+    gap: 5px;
+}
+
+#checkoutPage #rightCheckout .product-row .product-name .product-quantity{
+    font-weight: 400;
+}
+
+#checkoutPage #rightCheckout .product-row .product-name, #checkoutPage #rightCheckout .product-row .product-total{
+    display: flex;
+    align-items: center;
+}
+
+#checkoutPage #rightCheckout .subtotal, #checkoutPage #rightCheckout .total, #checkoutPage #rightCheckout .shipping, #checkoutPage #rightCheckout .coupon{
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkoutPage #rightCheckout .subtotal div, #checkoutPage #rightCheckout .total div, #checkoutPage #rightCheckout .shipping div, #checkoutPage #rightCheckout .coupon div{
+    font-size: 16px;
+    font-family: "Raleway", Sans-Serif;
+    font-weight: 400;
+}
+
+#checkoutPage #rightCheckout .total{
+    border-top: 1px solid #A5A29F;
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+#checkoutPage #rightCheckout .total strong{
+    font-weight: 600;
+}
+
+#checkoutPage #rightCheckout .total div{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#checkoutPage #rightCheckout .icon-text-list{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+#checkoutPage #rightCheckout .icon-text-list-item{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+#checkoutPage #rightCheckout .icon-text-list-item .icon-container{
+    width: 50px;
+    height: 50px;
+}
+
+#checkoutPage #rightCheckout .icon-text-list-item .text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#checkoutPage #rightCheckout .icon-text-list-item .text-container h3{
+    font-family: "Raleway", Sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4em;
+    margin: 0;
+}
+
+#checkoutPage #rightCheckout .icon-text-list-item .text-container p{
+    margin: 0;
+}
+
+@media (max-width: 1024px){
+    #checkoutPage{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    #checkoutPage #rightCheckout{
+        width: 100%;
+    }
+    #checkoutPage .icon-text-list{
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px){
+    #checkoutPage #rightCheckout #order_review .products img{
+        display: none;
+    }
+
+    #checkoutPage #rightCheckout .products{
+        padding: 20px 0;
+    }
+
+    #checkoutPage #rightCheckout .product-row{
+        height: 20px;
+    }
+}
+
+/*Webshipper modal*/
+#webshipper-modal #webshipper-drop-points-list{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#webshipper-modal #webshipper-modal-close{
+    top: 10px;
+}
+
+#shippingInfo #chosenShippingMethod #webshipper-modal-open{
+    margin: 0;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "Raleway", Sans-serif;
+    padding: 20px 32px;
+    border-radius: 10px;
+    background-color: #202020;
+}
+
+#shippingInfo #chosenShippingMethod #webshipper-modal-open:hover{
+    background-color: var( --e-global-color-secondary );
+}
+
+#chosenShippingMethod{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 600;
+    margin-top: 60px;
+}
+
+#webshipper-selected-drop-point{
+    text-align: left !important;
+}
+
+@media (max-width: 767px){
+    #webshipper-modal .webshipper-header{
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    #webshipper-address-search{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 300px){
+    #chosenShippingMethod{
+        margin-top: 70px;
+    }
+}
